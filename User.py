@@ -1,7 +1,7 @@
 # your improved User class goes here
 class User:
     all_posts = []
-    def __init__(self, name, age, gender):
+    def __init__(self, name, age, gender, message = None):
         self.name = name
         self.age = age
         self.gender = gender
@@ -13,6 +13,9 @@ class User:
     def post(self, message):
         new_post = {'name': self.name, 'message': message}
         User.all_posts.append(new_post)
+    
+    def del_post(self, self.name):
+        pass
 
 #########  Driver code ############
 
@@ -20,6 +23,6 @@ alice = User('Alice', '22', 'female')
 bob = User('Bob', '57', 'male')
 alice_post = alice.post('This is a test')
 bob_post = bob.post('This is my test')
-alice_post = alice.post('Did this work?')
+bob_post = bob.post('Did this work?')
 
 print(User.all_posts)     
