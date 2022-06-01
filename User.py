@@ -1,7 +1,7 @@
 # your improved User class goes here
 class User:
     all_posts = []
-    def __init__(self, name, age, gender, message = None):
+    def __init__(self, name, age, gender):
         self.name = name
         self.age = age
         self.gender = gender
