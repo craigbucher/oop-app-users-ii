@@ -14,15 +14,17 @@ class User:
         new_post = {'name': self.name, 'message': message}
         User.all_posts.append(new_post)
     
-    def del_post(self, self.name):
-        pass
+    def del_post(self, name):
+        return(f'Deleting post by {name}')
+        # rest of code . . . 
 
 #########  Driver code ############
 
 alice = User('Alice', '22', 'female')
-bob = User('Bob', '57', 'male')
-alice_post = alice.post('This is a test')
-bob_post = bob.post('This is my test')
-bob_post = bob.post('Did this work?')
+# bob = User('Bob', '57', 'male')
+# alice_post = alice.post('This is a test')
+# bob_post = bob.post('This is my test')
+# bob_post = bob.post('Did this work?')
+alice_delete = alice.del_post('Alice')
 
-print(User.all_posts)     
+print(alice_delete)     
